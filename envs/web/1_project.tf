@@ -12,5 +12,5 @@ module "project_services" {
     "identitytoolkit.googleapis.com",
     "firebasehosting.googleapis.com",
     "firestore.googleapis.com",
-   ]
+  ]
 }

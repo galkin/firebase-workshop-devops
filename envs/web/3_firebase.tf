@@ -28,8 +28,8 @@ resource "google_firebase_hosting_site" "app" {
 }
 
 resource "google_firestore_database" "database" {
-  project                     = local.project_id
-  name                        = "(default)"
-  location_id                 = var.region
-  type                        = "FIRESTORE_NATIVE"
+  project     = local.project_id
+  name        = "(default)"
+  location_id = var.region
+  type        = "FIRESTORE_NATIVE"
 }

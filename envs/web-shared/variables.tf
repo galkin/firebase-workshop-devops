@@ -10,12 +10,6 @@ variable "region" {
   default     = "us-west2"
 }
 
-variable "github_organization" {
-  type        = string
-  description = "GitHub Organization or Account"
-  default     = "galkin"
-}
-
 variable "domain" {
   type        = string
   description = "Domain name"

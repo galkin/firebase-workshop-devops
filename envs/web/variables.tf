@@ -14,9 +14,9 @@ variable "envs" {
   type = map(
     object(
       {
-        project_id    = string,
-        domain        = string,
-        zone          = string,
+        project_id = string,
+        domain     = string,
+        zone       = string,
       }
     )
   )
@@ -24,19 +24,19 @@ variable "envs" {
   description = "Domain and zone per environment"
   default = {
     "dev" = {
-      project_id    = "galkin-firebase-dev"
-      domain        = "dev.node.courses"
-      zone          = "node-courses"
+      project_id = "galkin-firebase-dev"
+      domain     = "dev.node.courses"
+      zone       = "node-courses"
     }
     "beta" = {
-      project_id    = "galkin-firebase-beta"
-      domain        = "beta.node.courses"
-      zone          = "node-courses"
+      project_id = "galkin-firebase-beta"
+      domain     = "beta.node.courses"
+      zone       = "node-courses"
     }
     "prod" = {
-      project_id    = "galkin-firebase-prod"
-      domain        = "node.courses"
-      zone          = "node-courses"
+      project_id = "galkin-firebase-prod"
+      domain     = "node.courses"
+      zone       = "node-courses"
     }
   }
 }
