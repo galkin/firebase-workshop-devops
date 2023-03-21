@@ -1,5 +1,5 @@
 # see https://stackoverflow.com/questions/67808112/trying-to-enable-firebase-for-an-existing-gcp-project
-# terraform import google_firebase_project.firebase 
+# terraform import google_firebase_project.firebase <project>
 resource "google_firebase_project" "firebase" {
   provider = google-beta
   project  = local.project_id
@@ -30,6 +30,6 @@ resource "google_firebase_hosting_site" "app" {
 resource "google_firestore_database" "database" {
   project                     = local.project_id
   name                        = "(default)"
-  location_id                 = "nam5"
+  location_id                 = var.region
   type                        = "FIRESTORE_NATIVE"
 }
