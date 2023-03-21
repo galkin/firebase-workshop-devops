@@ -1,0 +1,23 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+      - name: Generate fake terraform-key.json
+        run: touch terraform-key.json
+      - uses: terraform-linters/setup-tflint@v3
+        with:
+          tflint_version: v0.45.0
+      - uses: pre-commit/action@v3.0.0
+        env:
+          TF_WORKSPACE: dev
